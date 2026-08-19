@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,13 +6,27 @@
 
     <title>Sheena Arangali | Senior Web Developer</title>
 
-    <meta name="description" content="Sheena Arangali is a WordPress and Elementor developer specializing in responsive websites, SEO, and website development.">
+    <meta
+        name="description"
+        content="Sheena Arangali is a Senior Web Developer specializing in WordPress, Duda, Shopify, responsive web development, and SEO."
+    >
+
+    <meta name="author" content="Sheena Arangali">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
     <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
         * {
             margin: 0;
             padding: 0;
@@ -27,7 +40,7 @@
         body {
             font-family: 'Barlow', sans-serif;
             color: #151922;
-            background: #fff;
+            background: #ffffff;
             line-height: 1.6;
         }
 
@@ -36,37 +49,36 @@
             text-decoration: none;
         }
 
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
         .container {
             width: min(1140px, 90%);
-            margin: auto;
+            margin: 0 auto;
         }
 
-        /* NAV */
+
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(255,255,255,.96);
+            background: rgba(255, 255, 255, 0.96);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid #eceef2;
+            border-bottom: 1px solid #e9ebef;
         }
 
         .nav-inner {
             height: 76px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
         }
 
         .logo {
             font-size: 25px;
             font-weight: 800;
+            letter-spacing: -0.5px;
         }
 
         .logo span {
@@ -81,43 +93,53 @@
         }
 
         .nav-links a {
-            transition: .2s ease;
+            transition: 0.2s ease;
         }
 
         .nav-links a:hover {
             color: #0d38b8;
         }
 
-        /* HERO */
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             min-height: 720px;
             display: flex;
             align-items: center;
+
             background:
-                radial-gradient(circle at 85% 25%, rgba(13,56,184,.08), transparent 28%),
+                radial-gradient(
+                    circle at 85% 25%,
+                    rgba(13, 56, 184, 0.10),
+                    transparent 28%
+                ),
                 #f7f9fc;
         }
 
         .hero-content {
-            max-width: 850px;
+            max-width: 900px;
         }
 
         .eyebrow {
             display: inline-block;
+            margin-bottom: 22px;
+
             color: #0d38b8;
-            font-weight: 800;
             font-size: 14px;
+            font-weight: 800;
             letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 22px;
         }
 
         h1 {
-            font-size: clamp(52px, 8vw, 92px);
-            line-height: .94;
-            letter-spacing: -4px;
             margin-bottom: 30px;
+
+            font-size: clamp(52px, 8vw, 92px);
+            line-height: 0.94;
+            letter-spacing: -4px;
         }
 
         h1 span {
@@ -125,10 +147,31 @@
         }
 
         .hero-text {
-            max-width: 700px;
+            max-width: 740px;
+            margin-bottom: 30px;
+
             color: #626a77;
             font-size: 21px;
-            margin-bottom: 38px;
+        }
+
+        .platform-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 35px;
+        }
+
+        .platform {
+            padding: 8px 14px;
+
+            border: 1px solid #d8deea;
+            border-radius: 5px;
+
+            background: #ffffff;
+            color: #1b2430;
+
+            font-size: 14px;
+            font-weight: 700;
         }
 
         .buttons {
@@ -141,15 +184,19 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 14px 24px;
+
+            padding: 14px 25px;
+
             border-radius: 6px;
+
             font-weight: 700;
-            transition: .25s ease;
+
+            transition: 0.25s ease;
         }
 
         .button-primary {
-            color: #fff;
             background: #0d38b8;
+            color: #ffffff;
         }
 
         .button-primary:hover {
@@ -158,16 +205,53 @@
         }
 
         .button-outline {
-            border: 1px solid #d7dce5;
-            background: #fff;
+            border: 1px solid #d5dbe5;
+            background: #ffffff;
         }
 
         .button-outline:hover {
-            color: #0d38b8;
             border-color: #0d38b8;
+            color: #0d38b8;
         }
 
-        /* GENERAL */
+
+        /* =========================
+           STATS
+        ========================= */
+
+        .stats-section {
+            padding: 40px 0;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .stat {
+            padding: 28px;
+
+            border: 1px solid #e4e8ee;
+            border-radius: 8px;
+        }
+
+        .stat strong {
+            display: block;
+            margin-bottom: 4px;
+
+            color: #0d38b8;
+            font-size: 30px;
+        }
+
+        .stat span {
+            color: #68717e;
+        }
+
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
 
         section {
             padding: 110px 0;
@@ -178,77 +262,116 @@
         }
 
         .section-heading h2 {
+            margin-bottom: 16px;
+
             font-size: clamp(40px, 5vw, 60px);
             line-height: 1;
             letter-spacing: -2px;
-            margin-bottom: 16px;
         }
 
         .section-heading p {
             max-width: 680px;
+
             color: #68717e;
             font-size: 18px;
         }
 
-        /* STATS */
 
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 35px 0;
-        }
-
-        .stat {
-            padding: 25px;
-            border: 1px solid #e5e8ee;
-            border-radius: 8px;
-        }
-
-        .stat strong {
-            display: block;
-            color: #0d38b8;
-            font-size: 30px;
-            margin-bottom: 5px;
-        }
-
-        .stat span {
-            color: #68717e;
-        }
-
-        /* ABOUT */
+        /* =========================
+           ABOUT
+        ========================= */
 
         .about {
             display: grid;
-            grid-template-columns: 1.15fr .85fr;
+            grid-template-columns: 1.15fr 0.85fr;
             gap: 80px;
             align-items: center;
         }
 
         .about p {
+            margin-bottom: 20px;
+
             color: #5d6673;
             font-size: 19px;
-            margin-bottom: 20px;
         }
 
         .about-box {
             padding: 40px;
-            background: #f7f9fc;
+
             border-left: 4px solid #0d38b8;
+
+            background: #f7f9fc;
         }
 
         .about-box strong {
             display: block;
-            font-size: 30px;
             margin-bottom: 10px;
+
+            font-size: 30px;
         }
 
         .about-box p {
-            font-size: 17px;
             margin: 0;
+            font-size: 17px;
         }
 
-        /* SKILLS */
+
+        /* =========================
+           PLATFORMS
+        ========================= */
+
+        .platforms {
+            background: #151922;
+            color: #ffffff;
+        }
+
+        .platforms .section-heading p {
+            color: #aeb5c0;
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .platform-card {
+            padding: 35px;
+
+            border: 1px solid #303641;
+            border-radius: 8px;
+
+            background: #1b2029;
+
+            transition: 0.25s ease;
+        }
+
+        .platform-card:hover {
+            transform: translateY(-5px);
+            border-color: #0d38b8;
+        }
+
+        .platform-number {
+            margin-bottom: 18px;
+
+            color: #6f8bea;
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .platform-card h3 {
+            margin-bottom: 12px;
+            font-size: 30px;
+        }
+
+        .platform-card p {
+            color: #aeb5c0;
+        }
+
+
+        /* =========================
+           EXPERTISE
+        ========================= */
 
         .skills-grid {
             display: grid;
@@ -258,34 +381,42 @@
 
         .skill-card {
             padding: 32px;
+
             border: 1px solid #e3e7ed;
             border-radius: 8px;
-            transition: .25s ease;
+
+            transition: 0.25s ease;
         }
 
         .skill-card:hover {
             transform: translateY(-4px);
+
             border-color: #0d38b8;
-            box-shadow: 0 15px 35px rgba(0,0,0,.06);
+
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
         }
 
         .skill-number {
-            color: #0d38b8;
-            font-weight: 800;
-            font-size: 14px;
             margin-bottom: 14px;
+
+            color: #0d38b8;
+            font-size: 14px;
+            font-weight: 800;
         }
 
         .skill-card h3 {
-            font-size: 24px;
             margin-bottom: 10px;
+            font-size: 24px;
         }
 
         .skill-card p {
             color: #69717d;
         }
 
-        /* PROJECTS */
+
+        /* =========================
+           PROJECTS
+        ========================= */
 
         .projects {
             background: #f7f9fc;
@@ -300,74 +431,93 @@
         .project {
             display: flex;
             flex-direction: column;
-            background: #fff;
+
+            overflow: hidden;
+
             border: 1px solid #e2e6ec;
             border-radius: 10px;
-            overflow: hidden;
-            transition: .25s ease;
+
+            background: #ffffff;
+
+            transition: 0.25s ease;
         }
 
         .project:hover {
             transform: translateY(-5px);
-            box-shadow: 0 18px 45px rgba(0,0,0,.08);
+
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
         }
 
         .project-preview {
             height: 280px;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             background: #e9edf4;
+
             color: #69717d;
+
             font-size: 15px;
             font-weight: 700;
         }
 
         .project-content {
-            padding: 30px;
-            flex: 1;
             display: flex;
+            flex: 1;
             flex-direction: column;
+
+            padding: 30px;
         }
 
         .project-category {
+            margin-bottom: 8px;
+
             color: #0d38b8;
+
             font-size: 13px;
             font-weight: 800;
-            text-transform: uppercase;
+
             letter-spacing: 1px;
-            margin-bottom: 8px;
+            text-transform: uppercase;
         }
 
         .project h3 {
+            margin-bottom: 12px;
+
             font-size: 28px;
             line-height: 1.15;
-            margin-bottom: 12px;
         }
 
         .project p {
-            color: #68717d;
             margin-bottom: 20px;
+            color: #68717d;
         }
 
         .tags {
             display: flex;
             flex-wrap: wrap;
             gap: 7px;
+
             margin-bottom: 25px;
         }
 
         .tag {
             padding: 6px 10px;
+
+            border-radius: 4px;
+
             background: #eef2ff;
             color: #0d38b8;
-            border-radius: 4px;
+
             font-size: 12px;
             font-weight: 700;
         }
 
         .project-link {
             margin-top: auto;
+
             color: #0d38b8;
             font-weight: 800;
         }
@@ -376,7 +526,10 @@
             text-decoration: underline;
         }
 
-        /* TOOLS */
+
+        /* =========================
+           TOOLS
+        ========================= */
 
         .tools {
             display: flex;
@@ -386,30 +539,39 @@
 
         .tool {
             padding: 11px 17px;
+
             border: 1px solid #dfe3e9;
             border-radius: 5px;
+
+            background: #ffffff;
+
             font-weight: 600;
-            background: #fff;
         }
 
-        /* CONTACT */
+
+        /* =========================
+           CONTACT
+        ========================= */
 
         .contact {
             background: #151922;
-            color: #fff;
+            color: #ffffff;
+
             text-align: center;
         }
 
         .contact h2 {
-            font-size: clamp(42px, 6vw, 72px);
-            line-height: .95;
-            letter-spacing: -2px;
             margin-bottom: 22px;
+
+            font-size: clamp(42px, 6vw, 72px);
+            line-height: 0.95;
+            letter-spacing: -2px;
         }
 
         .contact p {
-            max-width: 620px;
+            max-width: 650px;
             margin: 0 auto 35px;
+
             color: #aeb5c0;
             font-size: 18px;
         }
@@ -422,32 +584,41 @@
         }
 
         .contact .button-primary {
-            background: #fff;
+            background: #ffffff;
             color: #151922;
         }
 
         .contact .button-outline {
-            background: transparent;
             border-color: #4a515d;
-            color: #fff;
+            background: transparent;
+            color: #ffffff;
         }
 
         .contact .button-outline:hover {
-            border-color: #fff;
+            border-color: #ffffff;
         }
 
-        /* FOOTER */
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             padding: 25px;
-            text-align: center;
-            color: #7f8792;
-            background: #151922;
+
             border-top: 1px solid #2b3039;
+
+            background: #151922;
+            color: #7f8792;
+
             font-size: 14px;
+            text-align: center;
         }
 
-        /* MOBILE */
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 768px) {
 
@@ -478,6 +649,7 @@
 
             .stats,
             .about,
+            .platform-grid,
             .skills-grid,
             .project-grid {
                 grid-template-columns: 1fr;
@@ -494,27 +666,60 @@
             .about-box {
                 padding: 30px;
             }
+
         }
+
     </style>
 </head>
 
+
 <body>
 
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <nav>
+
     <div class="container nav-inner">
 
-        <a href="#" class="logo">Sheena<span>.</span></a>
+        <a href="#" class="logo">
+            Sheena<span>.</span>
+        </a>
 
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#platforms">Platforms</a>
+            </li>
+
+            <li>
+                <a href="#expertise">Expertise</a>
+            </li>
+
+            <li>
+                <a href="#work">Work</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
         </ul>
 
     </div>
+
 </nav>
 
+
+<!-- =========================
+     HERO
+========================= -->
 
 <header class="hero">
 
@@ -522,27 +727,59 @@
 
         <div class="hero-content">
 
-            <span class="eyebrow">Senior Web Developer</span>
+            <span class="eyebrow">
+                Senior Web Developer
+            </span>
 
             <h1>
-                I build responsive<br>
-                websites that <span>work.</span>
+                I build websites<br>
+                that <span>work.</span>
             </h1>
 
             <p class="hero-text">
                 I'm Sheena, a Senior Web Developer specializing in
-                WordPress, responsive web development, and SEO.
-                I turn designs and ideas into clean, functional,
-                and user-friendly websites.
+                WordPress, Duda, and Shopify. I build and develop
+                responsive websites with a focus on clean implementation,
+                usability, SEO, and reliable performance.
             </p>
+
+            <div class="platform-list">
+
+                <span class="platform">
+                    WordPress
+                </span>
+
+                <span class="platform">
+                    Duda
+                </span>
+
+                <span class="platform">
+                    Shopify
+                </span>
+
+                <span class="platform">
+                    Responsive Development
+                </span>
+
+                <span class="platform">
+                    SEO
+                </span>
+
+            </div>
 
             <div class="buttons">
 
-                <a href="#work" class="button button-primary">
+                <a
+                    href="#work"
+                    class="button button-primary"
+                >
                     View My Work
                 </a>
 
-                <a href="#contact" class="button button-outline">
+                <a
+                    href="#contact"
+                    class="button button-outline"
+                >
                     Get In Touch
                 </a>
 
@@ -555,25 +792,44 @@
 </header>
 
 
-<section>
+<!-- =========================
+     STATS
+========================= -->
+
+<section class="stats-section">
 
     <div class="container">
 
         <div class="stats">
 
             <div class="stat">
-                <strong>5+</strong>
-                <span>Featured Websites</span>
+
+                <strong>WordPress</strong>
+
+                <span>
+                    Primary platform
+                </span>
+
             </div>
 
             <div class="stat">
-                <strong>WordPress, Duda, Shopify</strong>
-                <span>Primary CMS</span>
+
+                <strong>Duda</strong>
+
+                <span>
+                    Website development
+                </span>
+
             </div>
 
             <div class="stat">
-                <strong>Elementor, Divi</strong>
-                <span>Primary Builder</span>
+
+                <strong>Shopify</strong>
+
+                <span>
+                    Ecommerce platform
+                </span>
+
             </div>
 
         </div>
@@ -582,6 +838,10 @@
 
 </section>
 
+
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section id="about">
 
@@ -589,14 +849,17 @@
 
         <div class="section-heading">
 
-            <h2>About Me</h2>
+            <h2>
+                About Me
+            </h2>
 
             <p>
-                A Senior Web Developer focused on building clean,
-                responsive, and easy-to-manage websites.
+                Senior-level website development across
+                multiple platforms and client environments.
             </p>
 
         </div>
+
 
         <div class="about">
 
@@ -604,33 +867,42 @@
 
                 <p>
                     I'm Sheena Arangali, a Senior Web Developer
-                    with several years of experience working on websites
-                    for businesses, organizations, and agencies.
+                    specializing in WordPress, Duda, and Shopify.
                 </p>
 
                 <p>
-                    My main focus is WordPress, Duda and Shopify. I work
-                    across page development, responsive design,
-                    website updates, SEO, integrations, and
-                    performance improvements.
+                    I have several years of experience building,
+                    developing, and maintaining websites for businesses,
+                    organizations, and agencies.
                 </p>
 
                 <p>
-                    I enjoy taking a design, brief, or existing website
-                    and turning it into a polished, responsive,
-                    and functional website.
+                    My work covers the website development process
+                    from translating designs and requirements into
+                    responsive pages to implementing website changes,
+                    optimizing websites for SEO, troubleshooting issues,
+                    and maintaining existing websites.
+                </p>
+
+                <p>
+                    I primarily work with WordPress and Elementor,
+                    while also working across Duda and Shopify to
+                    deliver responsive and user-friendly websites.
                 </p>
 
             </div>
+
 
             <div class="about-box">
 
-                <strong>Website First</strong>
+                <strong>
+                    Senior Web Developer
+                </strong>
 
                 <p>
-                    From building pages and templates to responsive
-                    adjustments and ongoing website updates, I work
-                    across the website workflow.
+                    Focused on practical, reliable website development
+                    and delivering high-quality results across
+                    WordPress, Duda, and Shopify.
                 </p>
 
             </div>
@@ -642,75 +914,284 @@
 </section>
 
 
-<section id="skills">
+<!-- =========================
+     PLATFORMS
+========================= -->
+
+<section
+    id="platforms"
+    class="platforms"
+>
 
     <div class="container">
 
         <div class="section-heading">
 
-            <h2>What I Do</h2>
+            <h2>
+                Platforms I Work With
+            </h2>
 
             <p>
-                Practical web development skills focused on building
-                and maintaining professional websites.
+                Building and maintaining professional websites
+                across three major website platforms.
             </p>
 
         </div>
+
+
+        <div class="platform-grid">
+
+
+            <!-- WORDPRESS -->
+
+            <div class="platform-card">
+
+                <div class="platform-number">
+                    01 / WORDPRESS
+                </div>
+
+                <h3>
+                    WordPress
+                </h3>
+
+                <p>
+                    My primary platform. I build and maintain
+                    responsive WordPress websites using Elementor
+                    and other page builders, with experience in
+                    page development, templates, responsive layouts,
+                    SEO, troubleshooting, and ongoing maintenance.
+                </p>
+
+            </div>
+
+
+            <!-- DUDA -->
+
+            <div class="platform-card">
+
+                <div class="platform-number">
+                    02 / DUDA
+                </div>
+
+                <h3>
+                    Duda
+                </h3>
+
+                <p>
+                    Building responsive client websites in Duda,
+                    working with layouts, content, responsive
+                    settings, global styling, and website
+                    customization.
+                </p>
+
+            </div>
+
+
+            <!-- SHOPIFY -->
+
+            <div class="platform-card">
+
+                <div class="platform-number">
+                    03 / SHOPIFY
+                </div>
+
+                <h3>
+                    Shopify
+                </h3>
+
+                <p>
+                    Working with Shopify websites and ecommerce
+                    experiences, including storefront layouts,
+                    content, product presentation, responsive
+                    design, and website customization.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EXPERTISE
+========================= -->
+
+<section id="expertise">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+                Expertise
+            </h2>
+
+            <p>
+                The areas I focus on when building and maintaining
+                websites for clients and businesses.
+            </p>
+
+        </div>
+
 
         <div class="skills-grid">
 
+
             <div class="skill-card">
 
-                <div class="skill-number">01</div>
+                <div class="skill-number">
+                    01
+                </div>
 
-                <h3>Web Development</h3>
+                <h3>
+                    WordPress Development
+                </h3>
 
                 <p>
-                    Building pages, templates, website sections,
-                    content layouts, and maintaining WordPress websites.
+                    Building pages, templates, sections, headers,
+                    footers, forms, and responsive website layouts
+                    within WordPress.
                 </p>
 
             </div>
 
+
             <div class="skill-card">
 
-                <div class="skill-number">02</div>
+                <div class="skill-number">
+                    02
+                </div>
 
-                <h3>Elementor Development</h3>
+                <h3>
+                    Elementor Development
+                </h3>
 
                 <p>
-                    Elementor Pro layouts, responsive controls,
-                    global styles, headers, footers, forms,
-                    and reusable components.
+                    Elementor Pro development including responsive
+                    controls, global styles, reusable components,
+                    templates, and page customization.
                 </p>
 
             </div>
 
+
             <div class="skill-card">
 
-                <div class="skill-number">03</div>
+                <div class="skill-number">
+                    03
+                </div>
 
-                <h3>Responsive Design</h3>
+                <h3>
+                    Duda Development
+                </h3>
 
                 <p>
-                    Creating layouts that work properly across
-                    desktop, tablet, and mobile devices.
+                    Building and customizing responsive Duda websites,
+                    working with layouts, content, styling, and
+                    responsive website presentation.
                 </p>
 
             </div>
 
+
             <div class="skill-card">
 
-                <div class="skill-number">04</div>
+                <div class="skill-number">
+                    04
+                </div>
 
-                <h3>SEO & Optimization</h3>
+                <h3>
+                    Shopify Development
+                </h3>
+
+                <p>
+                    Working with Shopify storefronts and ecommerce
+                    layouts, including content, products, navigation,
+                    responsive design, and theme customization.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <div class="skill-number">
+                    05
+                </div>
+
+                <h3>
+                    Responsive Web Development
+                </h3>
+
+                <p>
+                    Creating layouts that provide a consistent,
+                    user-friendly experience across desktop,
+                    tablet, and mobile devices.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <div class="skill-number">
+                    06
+                </div>
+
+                <h3>
+                    SEO & Optimization
+                </h3>
 
                 <p>
                     On-page SEO, metadata, image optimization,
-                    content structure, and website performance improvements.
+                    content structure, Search Console, analytics,
+                    and website performance improvements.
                 </p>
 
             </div>
+
+
+            <div class="skill-card">
+
+                <div class="skill-number">
+                    07
+                </div>
+
+                <h3>
+                    Website Maintenance
+                </h3>
+
+                <p>
+                    Ongoing website updates, content changes,
+                    responsive fixes, troubleshooting, and
+                    general website improvements.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <div class="skill-number">
+                    08
+                </div>
+
+                <h3>
+                    Website Troubleshooting
+                </h3>
+
+                <p>
+                    Identifying layout, responsive, plugin,
+                    integration, and general website issues and
+                    implementing practical fixes.
+                </p>
+
+            </div>
+
 
         </div>
 
@@ -719,19 +1200,30 @@
 </section>
 
 
-<section id="work" class="projects">
+<!-- =========================
+     SELECTED WORK
+========================= -->
+
+<section
+    id="work"
+    class="projects"
+>
 
     <div class="container">
 
         <div class="section-heading">
 
-            <h2>Selected Work</h2>
+            <h2>
+                Selected Work
+            </h2>
 
             <p>
-                A selection of websites I've built and developed.
+                A selection of websites I've built and developed,
+                with a strong focus on WordPress and Elementor.
             </p>
 
         </div>
+
 
         <div class="project-grid">
 
@@ -747,22 +1239,38 @@
                 <div class="project-content">
 
                     <div class="project-category">
-                        Service Business
+                        WordPress · Service Business
                     </div>
 
-                    <h3>Clean Water of Virginia</h3>
+                    <h3>
+                        Clean Water of Virginia
+                    </h3>
 
                     <p>
-                        Built and developed pages for a water treatment
-                        business, creating responsive layouts and
-                        organizing service-focused content for users.
+                        Built and developed pages for a water
+                        treatment business, creating responsive
+                        layouts and organizing service-focused
+                        content for users.
                     </p>
 
                     <div class="tags">
-                        <span class="tag">WordPress</span>
-                        <span class="tag">Elementor</span>
-                        <span class="tag">Responsive</span>
-                        <span class="tag">SEO</span>
+
+                        <span class="tag">
+                            WordPress
+                        </span>
+
+                        <span class="tag">
+                            Elementor
+                        </span>
+
+                        <span class="tag">
+                            Responsive
+                        </span>
+
+                        <span class="tag">
+                            SEO
+                        </span>
+
                     </div>
 
                     <a
@@ -790,22 +1298,38 @@
                 <div class="project-content">
 
                     <div class="project-category">
-                        Hospitality
+                        WordPress · Hospitality
                     </div>
 
-                    <h3>Half Moon Resort</h3>
+                    <h3>
+                        Half Moon Resort
+                    </h3>
 
                     <p>
-                        Built and developed pages for a resort website,
-                        focusing on responsive layouts, clear content
-                        structure, and an engaging visitor experience.
+                        Built and developed pages for a resort
+                        website, focusing on responsive layouts,
+                        clear content structure, and an engaging
+                        visitor experience.
                     </p>
 
                     <div class="tags">
-                        <span class="tag">WordPress</span>
-                        <span class="tag">Elementor</span>
-                        <span class="tag">Responsive</span>
-                        <span class="tag">SEO</span>
+
+                        <span class="tag">
+                            WordPress
+                        </span>
+
+                        <span class="tag">
+                            Elementor
+                        </span>
+
+                        <span class="tag">
+                            Responsive
+                        </span>
+
+                        <span class="tag">
+                            SEO
+                        </span>
+
                     </div>
 
                     <a
@@ -833,22 +1357,37 @@
                 <div class="project-content">
 
                     <div class="project-category">
-                        Healthcare
+                        WordPress · Healthcare
                     </div>
 
-                    <h3>Prim Palliative & Hospice Care</h3>
+                    <h3>
+                        Prim Palliative & Hospice Care
+                    </h3>
 
                     <p>
-                        Built and developed pages for a healthcare
-                        website, creating responsive layouts and
+                        Built and developed healthcare website
+                        pages, creating responsive layouts and
                         presenting service information clearly.
                     </p>
 
                     <div class="tags">
-                        <span class="tag">WordPress</span>
-                        <span class="tag">Elementor</span>
-                        <span class="tag">Responsive</span>
-                        <span class="tag">SEO</span>
+
+                        <span class="tag">
+                            WordPress
+                        </span>
+
+                        <span class="tag">
+                            Elementor
+                        </span>
+
+                        <span class="tag">
+                            Responsive
+                        </span>
+
+                        <span class="tag">
+                            SEO
+                        </span>
+
                     </div>
 
                     <a
@@ -876,10 +1415,12 @@
                 <div class="project-content">
 
                     <div class="project-category">
-                        Healthcare
+                        WordPress · Healthcare
                     </div>
 
-                    <h3>Express Home & Renal Healthcare</h3>
+                    <h3>
+                        Express Home & Renal Healthcare
+                    </h3>
 
                     <p>
                         Built and developed pages for a healthcare
@@ -888,10 +1429,23 @@
                     </p>
 
                     <div class="tags">
-                        <span class="tag">WordPress</span>
-                        <span class="tag">Elementor</span>
-                        <span class="tag">Responsive</span>
-                        <span class="tag">SEO</span>
+
+                        <span class="tag">
+                            WordPress
+                        </span>
+
+                        <span class="tag">
+                            Elementor
+                        </span>
+
+                        <span class="tag">
+                            Responsive
+                        </span>
+
+                        <span class="tag">
+                            SEO
+                        </span>
+
                     </div>
 
                     <a
@@ -919,22 +1473,37 @@
                 <div class="project-content">
 
                     <div class="project-category">
-                        Content & Organization
+                        WordPress · Organization
                     </div>
 
-                    <h3>Milk for Health</h3>
+                    <h3>
+                        Milk for Health
+                    </h3>
 
                     <p>
-                        Built and developed pages for an organization
-                        supporting dairy farmers, with responsive layouts
-                        for educational and informational content.
+                        Built and developed pages for an organization,
+                        creating responsive layouts for educational,
+                        informational, and content-focused pages.
                     </p>
 
                     <div class="tags">
-                        <span class="tag">WordPress</span>
-                        <span class="tag">Elementor</span>
-                        <span class="tag">Responsive</span>
-                        <span class="tag">SEO</span>
+
+                        <span class="tag">
+                            WordPress
+                        </span>
+
+                        <span class="tag">
+                            Elementor
+                        </span>
+
+                        <span class="tag">
+                            Responsive
+                        </span>
+
+                        <span class="tag">
+                            SEO
+                        </span>
+
                     </div>
 
                     <a
@@ -958,39 +1527,93 @@
 </section>
 
 
+<!-- =========================
+     TOOLS
+========================= -->
+
 <section>
 
     <div class="container">
 
         <div class="section-heading">
 
-            <h2>Tools & Technologies</h2>
+            <h2>
+                Tools & Technologies
+            </h2>
 
             <p>
-                Platforms and tools I use across web development,
-                design, SEO, and website management.
+                Platforms, builders, development tools, and SEO
+                technologies I work with.
             </p>
 
         </div>
 
+
         <div class="tools">
 
-            <span class="tool">WordPress</span>
-            <span class="tool">Elementor Pro</span>
-            <span class="tool">Divi</span>
-            <span class="tool">Bricks</span>
-            <span class="tool">WooCommerce</span>
-            <span class="tool">HTML</span>
-            <span class="tool">CSS</span>
-            <span class="tool">JavaScript</span>
-            <span class="tool">Figma</span>
-            <span class="tool">Google Analytics</span>
-            <span class="tool">Google Search Console</span>
-            <span class="tool">Ahrefs</span>
-            <span class="tool">SEMrush</span>
-            <span class="tool">Screaming Frog</span>
-            <span class="tool">Shopify</span>
-            <span class="tool">Webflow</span>
+            <span class="tool">
+                WordPress
+            </span>
+
+            <span class="tool">
+                Duda
+            </span>
+
+            <span class="tool">
+                Shopify
+            </span>
+
+            <span class="tool">
+                Elementor Pro
+            </span>
+
+            <span class="tool">
+                WooCommerce
+            </span>
+
+            <span class="tool">
+                Divi
+            </span>
+
+            <span class="tool">
+                Bricks
+            </span>
+
+            <span class="tool">
+                HTML
+            </span>
+
+            <span class="tool">
+                CSS
+            </span>
+
+            <span class="tool">
+                JavaScript
+            </span>
+
+            <span class="tool">
+                Figma
+            </span>
+
+            <span class="tool">
+                Google Analytics
+            </span>
+
+            <span class="tool">
+                Google Search Console
+            </span>
+
+            <span class="tool">
+                Ahrefs
+            </span>
+
+            <span class="tool">
+                SEMrush
+            </span>
+
+            <span class="tool">
+                Screaming Frog
+            </span>
 
         </div>
 
@@ -999,17 +1622,29 @@
 </section>
 
 
-<section id="contact" class="contact">
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+    id="contact"
+    class="contact"
+>
 
     <div class="container">
 
-        <h2>Let's work together.</h2>
+        <h2>
+            Let's work together.
+        </h2>
 
         <p>
-            I'm open to remote WordPress and web development
-            opportunities. If you'd like to work together,
+            I'm open to remote Senior Web Developer opportunities
+            involving WordPress, Duda, Shopify, and website
+            development. If you're looking for someone who can
+            build, maintain, troubleshoot, and improve websites,
             I'd love to hear from you.
         </p>
+
 
         <div class="contact-buttons">
 
@@ -1019,6 +1654,7 @@
             >
                 Email Me
             </a>
+
 
             <a
                 href="https://www.linkedin.com/in/arangalisheena/"
@@ -1036,6 +1672,10 @@
 </section>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
     © 2026 Sheena Arangali · Senior Web Developer
@@ -1045,4 +1685,3 @@
 
 </body>
 </html>
-```
