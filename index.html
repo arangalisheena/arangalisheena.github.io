@@ -1,12 +1,13 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sheena Arangali | WordPress & Web Developer</title>
+    <title>Sheena Arangali | WordPress & Elementor Developer</title>
 
-    <meta name="description" content="Sheena Arangali is a WordPress and Elementor web developer specializing in responsive websites, website maintenance, and SEO.">
+    <meta name="description" content="Sheena Arangali is a WordPress and Elementor developer specializing in responsive websites, SEO, and website development.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,42 +27,46 @@
         body {
             font-family: 'Barlow', sans-serif;
             color: #151922;
-            background: #ffffff;
+            background: #fff;
             line-height: 1.6;
         }
 
         a {
-            text-decoration: none;
             color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
         }
 
         .container {
-            width: min(1120px, 90%);
-            margin: 0 auto;
+            width: min(1140px, 90%);
+            margin: auto;
         }
 
-        /* NAVIGATION */
+        /* NAV */
 
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #eeeeee;
+            background: rgba(255,255,255,.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #eceef2;
         }
 
         .nav-inner {
             height: 76px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 25px;
             font-weight: 800;
-            letter-spacing: -0.5px;
         }
 
         .logo span {
@@ -72,7 +77,11 @@
             display: flex;
             gap: 30px;
             list-style: none;
-            font-weight: 500;
+            font-weight: 600;
+        }
+
+        .nav-links a {
+            transition: .2s ease;
         }
 
         .nav-links a:hover {
@@ -85,27 +94,29 @@
             min-height: 720px;
             display: flex;
             align-items: center;
-            background: #f7f9fc;
+            background:
+                radial-gradient(circle at 85% 25%, rgba(13,56,184,.08), transparent 28%),
+                #f7f9fc;
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 850px;
         }
 
         .eyebrow {
             display: inline-block;
-            margin-bottom: 20px;
             color: #0d38b8;
-            font-weight: 700;
-            font-size: 15px;
+            font-weight: 800;
+            font-size: 14px;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            margin-bottom: 22px;
         }
 
         h1 {
             font-size: clamp(52px, 8vw, 92px);
-            line-height: 0.95;
-            letter-spacing: -3px;
+            line-height: .94;
+            letter-spacing: -4px;
             margin-bottom: 30px;
         }
 
@@ -114,47 +125,49 @@
         }
 
         .hero-text {
-            max-width: 650px;
+            max-width: 700px;
+            color: #626a77;
             font-size: 21px;
-            color: #5d6470;
             margin-bottom: 38px;
         }
 
         .buttons {
             display: flex;
-            gap: 15px;
             flex-wrap: wrap;
+            gap: 14px;
         }
 
         .button {
-            display: inline-block;
-            padding: 14px 25px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 24px;
             border-radius: 6px;
             font-weight: 700;
-            transition: 0.25s ease;
+            transition: .25s ease;
         }
 
         .button-primary {
+            color: #fff;
             background: #0d38b8;
-            color: white;
         }
 
         .button-primary:hover {
+            background: #092d98;
             transform: translateY(-2px);
-            background: #092b8f;
         }
 
-        .button-secondary {
-            border: 1px solid #d7dbe2;
-            background: white;
+        .button-outline {
+            border: 1px solid #d7dce5;
+            background: #fff;
         }
 
-        .button-secondary:hover {
-            border-color: #0d38b8;
+        .button-outline:hover {
             color: #0d38b8;
+            border-color: #0d38b8;
         }
 
-        /* SECTIONS */
+        /* GENERAL */
 
         section {
             padding: 110px 0;
@@ -165,43 +178,74 @@
         }
 
         .section-heading h2 {
-            font-size: clamp(38px, 5vw, 58px);
+            font-size: clamp(40px, 5vw, 60px);
             line-height: 1;
-            letter-spacing: -1.5px;
-            margin-bottom: 15px;
+            letter-spacing: -2px;
+            margin-bottom: 16px;
         }
 
         .section-heading p {
-            max-width: 650px;
-            color: #68707c;
+            max-width: 680px;
+            color: #68717e;
             font-size: 18px;
+        }
+
+        /* STATS */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 35px 0;
+        }
+
+        .stat {
+            padding: 25px;
+            border: 1px solid #e5e8ee;
+            border-radius: 8px;
+        }
+
+        .stat strong {
+            display: block;
+            color: #0d38b8;
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+
+        .stat span {
+            color: #68717e;
         }
 
         /* ABOUT */
 
         .about {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.15fr .85fr;
             gap: 80px;
             align-items: center;
         }
 
         .about p {
+            color: #5d6673;
             font-size: 19px;
-            color: #59616d;
             margin-bottom: 20px;
         }
 
-        .about-highlight {
-            background: #f7f9fc;
+        .about-box {
             padding: 40px;
+            background: #f7f9fc;
             border-left: 4px solid #0d38b8;
         }
 
-        .about-highlight strong {
+        .about-box strong {
             display: block;
             font-size: 30px;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+        }
+
+        .about-box p {
+            font-size: 17px;
+            margin: 0;
         }
 
         /* SKILLS */
@@ -213,19 +257,27 @@
         }
 
         .skill-card {
-            border: 1px solid #e6e9ee;
-            padding: 30px;
+            padding: 32px;
+            border: 1px solid #e3e7ed;
             border-radius: 8px;
-            transition: 0.25s ease;
+            transition: .25s ease;
         }
 
         .skill-card:hover {
             transform: translateY(-4px);
             border-color: #0d38b8;
+            box-shadow: 0 15px 35px rgba(0,0,0,.06);
+        }
+
+        .skill-number {
+            color: #0d38b8;
+            font-weight: 800;
+            font-size: 14px;
+            margin-bottom: 14px;
         }
 
         .skill-card h3 {
-            font-size: 22px;
+            font-size: 24px;
             margin-bottom: 10px;
         }
 
@@ -246,55 +298,82 @@
         }
 
         .project {
-            background: white;
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            border: 1px solid #e2e6ec;
             border-radius: 10px;
             overflow: hidden;
-            border: 1px solid #e5e8ed;
-            transition: 0.25s ease;
+            transition: .25s ease;
         }
 
         .project:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.07);
+            box-shadow: 0 18px 45px rgba(0,0,0,.08);
         }
 
-        .project-image {
-            height: 260px;
-            background: #dfe5ee;
+        .project-preview {
+            height: 280px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #68707c;
-            font-weight: 600;
+            background: #e9edf4;
+            color: #69717d;
+            font-size: 15px;
+            font-weight: 700;
         }
 
         .project-content {
             padding: 30px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
 
-        .project-content h3 {
-            font-size: 27px;
-            margin-bottom: 10px;
+        .project-category {
+            color: #0d38b8;
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
         }
 
-        .project-content p {
-            color: #69717d;
+        .project h3 {
+            font-size: 28px;
+            line-height: 1.15;
+            margin-bottom: 12px;
+        }
+
+        .project p {
+            color: #68717d;
             margin-bottom: 20px;
         }
 
         .tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 7px;
+            margin-bottom: 25px;
         }
 
         .tag {
+            padding: 6px 10px;
             background: #eef2ff;
             color: #0d38b8;
-            padding: 6px 10px;
             border-radius: 4px;
-            font-size: 13px;
-            font-weight: 600;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .project-link {
+            margin-top: auto;
+            color: #0d38b8;
+            font-weight: 800;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
         }
 
         /* TOOLS */
@@ -306,46 +385,65 @@
         }
 
         .tool {
+            padding: 11px 17px;
             border: 1px solid #dfe3e9;
-            padding: 12px 18px;
             border-radius: 5px;
             font-weight: 600;
+            background: #fff;
         }
 
         /* CONTACT */
 
         .contact {
             background: #151922;
-            color: white;
+            color: #fff;
             text-align: center;
         }
 
         .contact h2 {
-            font-size: clamp(42px, 6vw, 70px);
-            line-height: 1;
-            margin-bottom: 20px;
+            font-size: clamp(42px, 6vw, 72px);
+            line-height: .95;
+            letter-spacing: -2px;
+            margin-bottom: 22px;
         }
 
         .contact p {
-            color: #aeb5c0;
-            max-width: 600px;
+            max-width: 620px;
             margin: 0 auto 35px;
+            color: #aeb5c0;
             font-size: 18px;
         }
 
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
         .contact .button-primary {
-            background: white;
+            background: #fff;
             color: #151922;
+        }
+
+        .contact .button-outline {
+            background: transparent;
+            border-color: #4a515d;
+            color: #fff;
+        }
+
+        .contact .button-outline:hover {
+            border-color: #fff;
         }
 
         /* FOOTER */
 
         footer {
-            background: #151922;
-            color: #777f8b;
+            padding: 25px;
             text-align: center;
-            padding: 25px 0;
-            border-top: 1px solid #2a2f38;
+            color: #7f8792;
+            background: #151922;
+            border-top: 1px solid #2b3039;
             font-size: 14px;
         }
 
@@ -367,7 +465,7 @@
 
             h1 {
                 font-size: 55px;
-                letter-spacing: -2px;
+                letter-spacing: -2.5px;
             }
 
             .hero-text {
@@ -378,19 +476,23 @@
                 padding: 75px 0;
             }
 
+            .stats,
             .about,
-            .project-grid,
-            .skills-grid {
+            .skills-grid,
+            .project-grid {
                 grid-template-columns: 1fr;
-                gap: 25px;
             }
 
             .about {
                 gap: 40px;
             }
 
-            .project-image {
-                height: 210px;
+            .project-preview {
+                height: 220px;
+            }
+
+            .about-box {
+                padding: 30px;
             }
         }
     </style>
@@ -398,405 +500,550 @@
 
 <body>
 
-    <!-- NAVIGATION -->
+<nav>
+    <div class="container nav-inner">
 
-    <nav>
-        <div class="container nav-inner">
+        <a href="#" class="logo">Sheena<span>.</span></a>
 
-            <a href="#" class="logo">
-                Sheena<span>.</span>
-            </a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
 
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    </div>
+</nav>
 
-        </div>
-    </nav>
 
+<header class="hero">
 
-    <!-- HERO -->
+    <div class="container">
 
-    <header class="hero">
+        <div class="hero-content">
 
-        <div class="container">
+            <span class="eyebrow">WordPress & Elementor Developer</span>
 
-            <div class="hero-content">
+            <h1>
+                I build responsive<br>
+                websites that <span>work.</span>
+            </h1>
 
-                <span class="eyebrow">WordPress & Web Developer</span>
-
-                <h1>
-                    I build websites<br>
-                    that <span>work.</span>
-                </h1>
-
-                <p class="hero-text">
-                    I'm Sheena, a WordPress developer specializing in Elementor,
-                    responsive web design, website maintenance, and SEO.
-                </p>
-
-                <div class="buttons">
-
-                    <a href="#work" class="button button-primary">
-                        View My Work
-                    </a>
-
-                    <a href="#contact" class="button button-secondary">
-                        Get In Touch
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </header>
-
-
-    <!-- ABOUT -->
-
-    <section id="about">
-
-        <div class="container">
-
-            <div class="section-heading">
-                <h2>About Me</h2>
-                <p>
-                    A WordPress developer focused on building clean,
-                    responsive, and easy-to-manage websites.
-                </p>
-            </div>
-
-            <div class="about">
-
-                <div>
-
-                    <p>
-                        I'm Sheena Arangali, a WordPress and web developer
-                        with several years of experience working on websites
-                        for businesses, organizations, and agencies.
-                    </p>
-
-                    <p>
-                        My main focus is WordPress and Elementor, but I also
-                        have experience with other page builders, SEO,
-                        website maintenance, integrations, and performance
-                        optimization.
-                    </p>
-
-                    <p>
-                        I enjoy taking designs, ideas, or existing websites
-                        and turning them into responsive and functional
-                        websites.
-                    </p>
-
-                </div>
-
-                <div class="about-highlight">
-
-                    <strong>WordPress First</strong>
-
-                    <p>
-                        From building pages and templates to troubleshooting
-                        and ongoing maintenance, I work across the full
-                        WordPress website workflow.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- SKILLS -->
-
-    <section id="skills">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <h2>What I Do</h2>
-
-                <p>
-                    Practical web development skills focused on building
-                    and maintaining professional websites.
-                </p>
-
-            </div>
-
-            <div class="skills-grid">
-
-                <div class="skill-card">
-                    <h3>WordPress Development</h3>
-                    <p>
-                        Website development, page building, templates,
-                        content updates, plugin configuration, and
-                        ongoing maintenance.
-                    </p>
-                </div>
-
-                <div class="skill-card">
-                    <h3>Elementor Development</h3>
-                    <p>
-                        Elementor Pro layouts, responsive controls,
-                        global styles, headers, footers, forms, and
-                        reusable components.
-                    </p>
-                </div>
-
-                <div class="skill-card">
-                    <h3>Responsive Design</h3>
-                    <p>
-                        Creating websites that work smoothly across
-                        desktop, tablet, and mobile devices.
-                    </p>
-                </div>
-
-                <div class="skill-card">
-                    <h3>SEO & Optimization</h3>
-                    <p>
-                        On-page SEO, metadata, image optimization,
-                        Search Console, analytics, and website
-                        performance improvements.
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- PROJECTS -->
-
-    <section id="work" class="projects">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <h2>Selected Work</h2>
-
-                <p>
-                    A selection of websites and projects I've worked on.
-                </p>
-
-            </div>
-
-            <div class="project-grid">
-
-
-                <!-- PROJECT 1 -->
-
-                <article class="project">
-
-                    <div class="project-image">
-                        Project Screenshot
-                    </div>
-
-                    <div class="project-content">
-
-                        <h3>Healthcare Website</h3>
-
-                        <p>
-                            WordPress website development and ongoing
-                            page updates focused on clear content,
-                            responsive layouts, and usability.
-                        </p>
-
-                        <div class="tags">
-                            <span class="tag">WordPress</span>
-                            <span class="tag">Elementor</span>
-                            <span class="tag">Responsive</span>
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PROJECT 2 -->
-
-                <article class="project">
-
-                    <div class="project-image">
-                        Project Screenshot
-                    </div>
-
-                    <div class="project-content">
-
-                        <h3>Nonprofit Website</h3>
-
-                        <p>
-                            Website updates and new page development
-                            for a community-focused organization.
-                        </p>
-
-                        <div class="tags">
-                            <span class="tag">WordPress</span>
-                            <span class="tag">Elementor</span>
-                            <span class="tag">SEO</span>
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PROJECT 3 -->
-
-                <article class="project">
-
-                    <div class="project-image">
-                        Project Screenshot
-                    </div>
-
-                    <div class="project-content">
-
-                        <h3>Hospitality Website</h3>
-
-                        <p>
-                            Website design and development focused on
-                            responsive layouts, content structure, and
-                            visual presentation.
-                        </p>
-
-                        <div class="tags">
-                            <span class="tag">WordPress</span>
-                            <span class="tag">Elementor</span>
-                            <span class="tag">Design</span>
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PROJECT 4 -->
-
-                <article class="project">
-
-                    <div class="project-image">
-                        Project Screenshot
-                    </div>
-
-                    <div class="project-content">
-
-                        <h3>Business Website</h3>
-
-                        <p>
-                            Website maintenance, page development,
-                            responsive improvements, and content
-                            management.
-                        </p>
-
-                        <div class="tags">
-                            <span class="tag">WordPress</span>
-                            <span class="tag">Elementor</span>
-                            <span class="tag">Maintenance</span>
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- TOOLS -->
-
-    <section>
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <h2>Tools & Technologies</h2>
-
-                <p>
-                    Platforms and tools I use across web development,
-                    design, SEO, and website management.
-                </p>
-
-            </div>
-
-            <div class="tools">
-
-                <span class="tool">WordPress</span>
-                <span class="tool">Elementor Pro</span>
-                <span class="tool">Divi</span>
-                <span class="tool">Bricks</span>
-                <span class="tool">WooCommerce</span>
-                <span class="tool">HTML</span>
-                <span class="tool">CSS</span>
-                <span class="tool">JavaScript</span>
-                <span class="tool">Figma</span>
-                <span class="tool">Google Analytics</span>
-                <span class="tool">Google Search Console</span>
-                <span class="tool">Ahrefs</span>
-                <span class="tool">SEMrush</span>
-                <span class="tool">Screaming Frog</span>
-                <span class="tool">Shopify</span>
-                <span class="tool">Webflow</span>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-
-    <section id="contact" class="contact">
-
-        <div class="container">
-
-            <h2>Let's work together.</h2>
-
-            <p>
-                I'm open to remote WordPress and web development
-                opportunities. If you'd like to work together,
-                I'd love to hear from you.
+            <p class="hero-text">
+                I'm Sheena, a WordPress developer specializing in
+                Elementor, responsive web development, and SEO.
+                I turn designs and ideas into clean, functional,
+                and user-friendly websites.
             </p>
 
+            <div class="buttons">
+
+                <a href="#work" class="button button-primary">
+                    View My Work
+                </a>
+
+                <a href="#contact" class="button button-outline">
+                    Get In Touch
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<section>
+
+    <div class="container">
+
+        <div class="stats">
+
+            <div class="stat">
+                <strong>5+</strong>
+                <span>Featured Websites</span>
+            </div>
+
+            <div class="stat">
+                <strong>WordPress</strong>
+                <span>Primary CMS</span>
+            </div>
+
+            <div class="stat">
+                <strong>Elementor</strong>
+                <span>Primary Builder</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>About Me</h2>
+
+            <p>
+                A WordPress developer focused on building clean,
+                responsive, and easy-to-manage websites.
+            </p>
+
+        </div>
+
+        <div class="about">
+
+            <div>
+
+                <p>
+                    I'm Sheena Arangali, a WordPress and web developer
+                    with several years of experience working on websites
+                    for businesses, organizations, and agencies.
+                </p>
+
+                <p>
+                    My main focus is WordPress and Elementor. I work
+                    across page development, responsive design,
+                    website updates, SEO, integrations, and
+                    performance improvements.
+                </p>
+
+                <p>
+                    I enjoy taking a design, brief, or existing website
+                    and turning it into a polished, responsive,
+                    and functional website.
+                </p>
+
+            </div>
+
+            <div class="about-box">
+
+                <strong>WordPress First</strong>
+
+                <p>
+                    From building pages and templates to responsive
+                    adjustments and ongoing website updates, I work
+                    across the WordPress website workflow.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="skills">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>What I Do</h2>
+
+            <p>
+                Practical web development skills focused on building
+                and maintaining professional websites.
+            </p>
+
+        </div>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+
+                <div class="skill-number">01</div>
+
+                <h3>WordPress Development</h3>
+
+                <p>
+                    Building pages, templates, website sections,
+                    content layouts, and maintaining WordPress websites.
+                </p>
+
+            </div>
+
+            <div class="skill-card">
+
+                <div class="skill-number">02</div>
+
+                <h3>Elementor Development</h3>
+
+                <p>
+                    Elementor Pro layouts, responsive controls,
+                    global styles, headers, footers, forms,
+                    and reusable components.
+                </p>
+
+            </div>
+
+            <div class="skill-card">
+
+                <div class="skill-number">03</div>
+
+                <h3>Responsive Design</h3>
+
+                <p>
+                    Creating layouts that work properly across
+                    desktop, tablet, and mobile devices.
+                </p>
+
+            </div>
+
+            <div class="skill-card">
+
+                <div class="skill-number">04</div>
+
+                <h3>SEO & Optimization</h3>
+
+                <p>
+                    On-page SEO, metadata, image optimization,
+                    content structure, and website performance improvements.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="work" class="projects">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>Selected Work</h2>
+
+            <p>
+                A selection of websites I've built and developed
+                using WordPress and Elementor.
+            </p>
+
+        </div>
+
+        <div class="project-grid">
+
+
+            <!-- CLEAN WATER -->
+
+            <article class="project">
+
+                <div class="project-preview">
+                    Clean Water of Virginia
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        Service Business
+                    </div>
+
+                    <h3>Clean Water of Virginia</h3>
+
+                    <p>
+                        Built and developed pages for a water treatment
+                        business, creating responsive layouts and
+                        organizing service-focused content for users.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">WordPress</span>
+                        <span class="tag">Elementor</span>
+                        <span class="tag">Responsive</span>
+                        <span class="tag">SEO</span>
+                    </div>
+
+                    <a
+                        href="https://cleanwaterva.com/"
+                        target="_blank"
+                        rel="noopener"
+                        class="project-link"
+                    >
+                        View Website →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- HALF MOON -->
+
+            <article class="project">
+
+                <div class="project-preview">
+                    Half Moon Resort
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        Hospitality
+                    </div>
+
+                    <h3>Half Moon Resort</h3>
+
+                    <p>
+                        Built and developed pages for a resort website,
+                        focusing on responsive layouts, clear content
+                        structure, and an engaging visitor experience.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">WordPress</span>
+                        <span class="tag">Elementor</span>
+                        <span class="tag">Responsive</span>
+                        <span class="tag">SEO</span>
+                    </div>
+
+                    <a
+                        href="https://halfmoonresortsmn.com/"
+                        target="_blank"
+                        rel="noopener"
+                        class="project-link"
+                    >
+                        View Website →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRIM -->
+
+            <article class="project">
+
+                <div class="project-preview">
+                    Prim Palliative & Hospice Care
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        Healthcare
+                    </div>
+
+                    <h3>Prim Palliative & Hospice Care</h3>
+
+                    <p>
+                        Built and developed pages for a healthcare
+                        website, creating responsive layouts and
+                        presenting service information clearly.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">WordPress</span>
+                        <span class="tag">Elementor</span>
+                        <span class="tag">Responsive</span>
+                        <span class="tag">SEO</span>
+                    </div>
+
+                    <a
+                        href="https://www.primhospicecares.com/"
+                        target="_blank"
+                        rel="noopener"
+                        class="project-link"
+                    >
+                        View Website →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- EXPRESS -->
+
+            <article class="project">
+
+                <div class="project-preview">
+                    Express Home & Renal Healthcare
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        Healthcare
+                    </div>
+
+                    <h3>Express Home & Renal Healthcare</h3>
+
+                    <p>
+                        Built and developed pages for a healthcare
+                        services website, focusing on responsive
+                        presentation and clear service information.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">WordPress</span>
+                        <span class="tag">Elementor</span>
+                        <span class="tag">Responsive</span>
+                        <span class="tag">SEO</span>
+                    </div>
+
+                    <a
+                        href="https://www.expresshrh.com/"
+                        target="_blank"
+                        rel="noopener"
+                        class="project-link"
+                    >
+                        View Website →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- MILK FOR HEALTH -->
+
+            <article class="project">
+
+                <div class="project-preview">
+                    Milk for Health
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        Content & Organization
+                    </div>
+
+                    <h3>Milk for Health</h3>
+
+                    <p>
+                        Built and developed pages for an organization
+                        supporting dairy farmers, with responsive layouts
+                        for educational and informational content.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">WordPress</span>
+                        <span class="tag">Elementor</span>
+                        <span class="tag">Responsive</span>
+                        <span class="tag">SEO</span>
+                    </div>
+
+                    <a
+                        href="https://milkforhealth.org/"
+                        target="_blank"
+                        rel="noopener"
+                        class="project-link"
+                    >
+                        View Website →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>Tools & Technologies</h2>
+
+            <p>
+                Platforms and tools I use across web development,
+                design, SEO, and website management.
+            </p>
+
+        </div>
+
+        <div class="tools">
+
+            <span class="tool">WordPress</span>
+            <span class="tool">Elementor Pro</span>
+            <span class="tool">Divi</span>
+            <span class="tool">Bricks</span>
+            <span class="tool">WooCommerce</span>
+            <span class="tool">HTML</span>
+            <span class="tool">CSS</span>
+            <span class="tool">JavaScript</span>
+            <span class="tool">Figma</span>
+            <span class="tool">Google Analytics</span>
+            <span class="tool">Google Search Console</span>
+            <span class="tool">Ahrefs</span>
+            <span class="tool">SEMrush</span>
+            <span class="tool">Screaming Frog</span>
+            <span class="tool">Shopify</span>
+            <span class="tool">Webflow</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="contact" class="contact">
+
+    <div class="container">
+
+        <h2>Let's work together.</h2>
+
+        <p>
+            I'm open to remote WordPress and web development
+            opportunities. If you'd like to work together,
+            I'd love to hear from you.
+        </p>
+
+        <div class="contact-buttons">
+
             <a
-                href="mailto:YOUR-EMAIL@example.com"
+                href="mailto:arangalisheena@gmail.com"
                 class="button button-primary"
             >
-                Get In Touch
+                Email Me
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/arangalisheena/"
+                target="_blank"
+                rel="noopener"
+                class="button button-outline"
+            >
+                LinkedIn
             </a>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- FOOTER -->
+<footer>
 
-    <footer>
+    © 2026 Sheena Arangali · WordPress & Web Developer
 
-        <div class="container">
+</footer>
 
-            © 2026 Sheena Arangali. All rights reserved.
-
-        </div>
-
-    </footer>
 
 </body>
 </html>
+```
