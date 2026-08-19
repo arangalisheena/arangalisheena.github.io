@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sheena Arangali | WordPress & Web Developer</title>
+
+    <meta name="description" content="Sheena Arangali is a WordPress and Elementor web developer specializing in responsive websites, website maintenance, and SEO.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Barlow', sans-serif;
+            color: #151922;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1120px, 90%);
+            margin: 0 auto;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .nav-inner {
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #0d38b8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #0d38b8;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 720px;
+            display: flex;
+            align-items: center;
+            background: #f7f9fc;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #0d38b8;
+            font-weight: 700;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        h1 {
+            font-size: clamp(52px, 8vw, 92px);
+            line-height: 0.95;
+            letter-spacing: -3px;
+            margin-bottom: 30px;
+        }
+
+        h1 span {
+            color: #0d38b8;
+        }
+
+        .hero-text {
+            max-width: 650px;
+            font-size: 21px;
+            color: #5d6470;
+            margin-bottom: 38px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 6px;
+            font-weight: 700;
+            transition: 0.25s ease;
+        }
+
+        .button-primary {
+            background: #0d38b8;
+            color: white;
+        }
+
+        .button-primary:hover {
+            transform: translateY(-2px);
+            background: #092b8f;
+        }
+
+        .button-secondary {
+            border: 1px solid #d7dbe2;
+            background: white;
+        }
+
+        .button-secondary:hover {
+            border-color: #0d38b8;
+            color: #0d38b8;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 110px 0;
+        }
+
+        .section-heading {
+            margin-bottom: 55px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(38px, 5vw, 58px);
+            line-height: 1;
+            letter-spacing: -1.5px;
+            margin-bottom: 15px;
+        }
+
+        .section-heading p {
+            max-width: 650px;
+            color: #68707c;
+            font-size: 18px;
+        }
+
+        /* ABOUT */
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about p {
+            font-size: 19px;
+            color: #59616d;
+            margin-bottom: 20px;
+        }
+
+        .about-highlight {
+            background: #f7f9fc;
+            padding: 40px;
+            border-left: 4px solid #0d38b8;
+        }
+
+        .about-highlight strong {
+            display: block;
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        /* SKILLS */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            border: 1px solid #e6e9ee;
+            padding: 30px;
+            border-radius: 8px;
+            transition: 0.25s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-4px);
+            border-color: #0d38b8;
+        }
+
+        .skill-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
+            color: #69717d;
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            background: #f7f9fc;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .project {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #e5e8ed;
+            transition: 0.25s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.07);
+        }
+
+        .project-image {
+            height: 260px;
+            background: #dfe5ee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #68707c;
+            font-weight: 600;
+        }
+
+        .project-content {
+            padding: 30px;
+        }
+
+        .project-content h3 {
+            font-size: 27px;
+            margin-bottom: 10px;
+        }
+
+        .project-content p {
+            color: #69717d;
+            margin-bottom: 20px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: #eef2ff;
+            color: #0d38b8;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* TOOLS */
+
+        .tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tool {
+            border: 1px solid #dfe3e9;
+            padding: 12px 18px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: #151922;
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: clamp(42px, 6vw, 70px);
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            color: #aeb5c0;
+            max-width: 600px;
+            margin: 0 auto 35px;
+            font-size: 18px;
+        }
+
+        .contact .button-primary {
+            background: white;
+            color: #151922;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #151922;
+            color: #777f8b;
+            text-align: center;
+            padding: 25px 0;
+            border-top: 1px solid #2a2f38;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 768px) {
+
+            .nav-inner {
+                height: 65px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                min-height: 650px;
+            }
+
+            h1 {
+                font-size: 55px;
+                letter-spacing: -2px;
+            }
+
+            .hero-text {
+                font-size: 18px;
+            }
+
+            section {
+                padding: 75px 0;
+            }
+
+            .about,
+            .project-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .about {
+                gap: 40px;
+            }
+
+            .project-image {
+                height: 210px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+        <div class="container nav-inner">
+
+            <a href="#" class="logo">
+                Sheena<span>.</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">WordPress & Web Developer</span>
+
+                <h1>
+                    I build websites<br>
+                    that <span>work.</span>
+                </h1>
+
+                <p class="hero-text">
+                    I'm Sheena, a WordPress developer specializing in Elementor,
+                    responsive web design, website maintenance, and SEO.
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#work" class="button button-primary">
+                        View My Work
+                    </a>
+
+                    <a href="#contact" class="button button-secondary">
+                        Get In Touch
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>About Me</h2>
+                <p>
+                    A WordPress developer focused on building clean,
+                    responsive, and easy-to-manage websites.
+                </p>
+            </div>
+
+            <div class="about">
+
+                <div>
+
+                    <p>
+                        I'm Sheena Arangali, a WordPress and web developer
+                        with several years of experience working on websites
+                        for businesses, organizations, and agencies.
+                    </p>
+
+                    <p>
+                        My main focus is WordPress and Elementor, but I also
+                        have experience with other page builders, SEO,
+                        website maintenance, integrations, and performance
+                        optimization.
+                    </p>
+
+                    <p>
+                        I enjoy taking designs, ideas, or existing websites
+                        and turning them into responsive and functional
+                        websites.
+                    </p>
+
+                </div>
+
+                <div class="about-highlight">
+
+                    <strong>WordPress First</strong>
+
+                    <p>
+                        From building pages and templates to troubleshooting
+                        and ongoing maintenance, I work across the full
+                        WordPress website workflow.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>What I Do</h2>
+
+                <p>
+                    Practical web development skills focused on building
+                    and maintaining professional websites.
+                </p>
+
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <h3>WordPress Development</h3>
+                    <p>
+                        Website development, page building, templates,
+                        content updates, plugin configuration, and
+                        ongoing maintenance.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Elementor Development</h3>
+                    <p>
+                        Elementor Pro layouts, responsive controls,
+                        global styles, headers, footers, forms, and
+                        reusable components.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Responsive Design</h3>
+                    <p>
+                        Creating websites that work smoothly across
+                        desktop, tablet, and mobile devices.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>SEO & Optimization</h3>
+                    <p>
+                        On-page SEO, metadata, image optimization,
+                        Search Console, analytics, and website
+                        performance improvements.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="work" class="projects">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>Selected Work</h2>
+
+                <p>
+                    A selection of websites and projects I've worked on.
+                </p>
+
+            </div>
+
+            <div class="project-grid">
+
+
+                <!-- PROJECT 1 -->
+
+                <article class="project">
+
+                    <div class="project-image">
+                        Project Screenshot
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Healthcare Website</h3>
+
+                        <p>
+                            WordPress website development and ongoing
+                            page updates focused on clear content,
+                            responsive layouts, and usability.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">Elementor</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 2 -->
+
+                <article class="project">
+
+                    <div class="project-image">
+                        Project Screenshot
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Nonprofit Website</h3>
+
+                        <p>
+                            Website updates and new page development
+                            for a community-focused organization.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">Elementor</span>
+                            <span class="tag">SEO</span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 3 -->
+
+                <article class="project">
+
+                    <div class="project-image">
+                        Project Screenshot
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Hospitality Website</h3>
+
+                        <p>
+                            Website design and development focused on
+                            responsive layouts, content structure, and
+                            visual presentation.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">Elementor</span>
+                            <span class="tag">Design</span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 4 -->
+
+                <article class="project">
+
+                    <div class="project-image">
+                        Project Screenshot
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Business Website</h3>
+
+                        <p>
+                            Website maintenance, page development,
+                            responsive improvements, and content
+                            management.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">Elementor</span>
+                            <span class="tag">Maintenance</span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TOOLS -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>Tools & Technologies</h2>
+
+                <p>
+                    Platforms and tools I use across web development,
+                    design, SEO, and website management.
+                </p>
+
+            </div>
+
+            <div class="tools">
+
+                <span class="tool">WordPress</span>
+                <span class="tool">Elementor Pro</span>
+                <span class="tool">Divi</span>
+                <span class="tool">Bricks</span>
+                <span class="tool">WooCommerce</span>
+                <span class="tool">HTML</span>
+                <span class="tool">CSS</span>
+                <span class="tool">JavaScript</span>
+                <span class="tool">Figma</span>
+                <span class="tool">Google Analytics</span>
+                <span class="tool">Google Search Console</span>
+                <span class="tool">Ahrefs</span>
+                <span class="tool">SEMrush</span>
+                <span class="tool">Screaming Frog</span>
+                <span class="tool">Shopify</span>
+                <span class="tool">Webflow</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="contact">
+
+        <div class="container">
+
+            <h2>Let's work together.</h2>
+
+            <p>
+                I'm open to remote WordPress and web development
+                opportunities. If you'd like to work together,
+                I'd love to hear from you.
+            </p>
+
+            <a
+                href="mailto:YOUR-EMAIL@example.com"
+                class="button button-primary"
+            >
+                Get In Touch
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container">
+
+            © 2026 Sheena Arangali. All rights reserved.
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
